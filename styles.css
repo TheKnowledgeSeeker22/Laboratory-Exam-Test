@@ -1274,3 +1274,476 @@ form button {
   }
 }
 
+/* ========================================
+   BASE RESPONSIVE SCALING (Applies Globally for Fluidity)
+   ======================================== */
+/* Use rem units for better scaling; root font adjusts slightly on mobile */
+:root {
+  font-size: 16px; /* Desktop base */
+}
+
+@media (max-width: 768px) {
+  :root {
+    font-size: 15px; /* Slight reduction for mobile base */
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    font-size: 14px; /* Minimum for readability */
+  }
+}
+
+/* ========================================
+   TABLETS AND MOBILES (≤768px): Scale Down, Preserve Structure
+   ======================================== */
+@media (max-width: 768px) {
+  /* Container: Near-full width with minimal padding */
+  .container {
+    max-width: 95%;
+    padding: 0 0.8rem;
+  }
+
+  /* Header/Nav: Horizontal with wrap; smaller but multi-link visible */
+  .site-header {
+    padding: 0.8rem 0;
+  }
+
+  .header-inner {
+    gap: 0.5rem; /* Small space if wrapping */
+  }
+
+  #logo.logo {
+    font-size: 1.15rem;
+    letter-spacing: 0.8px;
+  }
+
+  .logo i {
+    font-size: 1.4rem;
+    margin-right: 0.4rem;
+  }
+
+  .nav-menu {
+    flex-wrap: wrap; /* Wraps links if screen too narrow, keeps horizontal */
+    justify-content: center;
+    gap: 0.5rem; /* Space between wrapped lines */
+  }
+
+  .nav-menu li {
+    flex: 1 1 auto; /* Allows shrinking */
+  }
+
+  .nav-link {
+    margin: 0 0.8rem; /* Tighter spacing */
+    font-size: 0.95rem;
+    padding: 0.2rem 0.4rem; /* Touch-friendly padding */
+    min-width: 4rem; /* Prevents squishing */
+  }
+
+  .nav-link::after {
+    bottom: -3px; /* Adjust for smaller text */
+    height: 1.5px;
+  }
+
+  /* Main Content: Reduced padding, lighter shadows; keeps card feel */
+  #mainContent {
+    margin: 1.5rem auto;
+    padding: 2rem; /* Still generous but scaled */
+    max-width: 95%;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(212, 175, 55, 0.08);
+  }
+
+  #mainContent::before {
+    width: 30px;
+    height: 15px; /* Smaller "seal" */
+  }
+
+  #mainContent h1 {
+    font-size: 2.4rem; /* Scaled but prominent */
+    margin-bottom: 1.2rem;
+    letter-spacing: 1.5px;
+    padding-bottom: 0.4rem;
+  }
+
+  #mainContent h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  #mainContent p {
+    font-size: 1.05rem; /* Readable, centered */
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+    text-align: center; /* Keep desktop centering */
+  }
+
+  #mainContent ul li {
+    margin-bottom: 0.7rem;
+    padding-left: 1.3rem;
+    font-size: 1rem;
+  }
+
+  #mainContent ul li:before {
+    font-size: 1rem;
+  }
+
+  /* Videos/History: Auto-fit grid (1-2 cols), shorter but bordered like desktop */
+  .videos-section,
+  .history-video-section {
+    margin-top: 2.5rem;
+    padding: 1.8rem;
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .videos-section h2,
+  .history-video-section h2 {
+    font-size: 1.7rem;
+    text-align: center; /* Keep centered */
+  }
+
+  .videos-section p,
+  .history-video-section p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .videos-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Allows 2 cols on wider mobiles/tablets */
+    gap: 1.5rem;
+    max-width: 100%;
+  }
+
+  .video-card,
+  .history-video-card {
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08); /* Lighter but present */
+  }
+
+  .video-card iframe,
+  .history-video-card iframe {
+    height: 180px; /* Scaled height */
+    border-radius: 6px;
+  }
+
+  .video-card h3,
+  .history-video-card h3 {
+    font-size: 1.05rem;
+    margin-top: 0.8rem;
+  }
+
+  /* Quotes: Auto-fit (1-2 cols), keep desktop card style */
+  .quotes-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Flexible columns */
+    gap: 1.5rem;
+    margin-top: 1.8rem;
+  }
+
+  .quote-card {
+    padding: 1.3rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08), 0 0 8px rgba(212, 175, 55, 0.12);
+  }
+
+  .quote-card::after {
+    font-size: 2.5rem;
+    top: -8px;
+    left: 15px;
+  }
+
+  .quote-text {
+    font-size: 1.05rem;
+    line-height: 1.45;
+  }
+
+  .quote-author {
+    font-size: 0.95rem;
+    margin-top: 0.8rem;
+  }
+
+  /* Corps: Keep row on tablets; smaller images, centered content */
+  .corps-grid {
+    gap: 2rem;
+    margin-top: 1.8rem;
+  }
+
+  .corps-card {
+    flex-direction: row; /* Preserve horizontal like desktop */
+    align-items: flex-start; /* Top-align if heights vary */
+    padding: 1.3rem;
+    gap: 1rem;
+    min-height: 160px; /* Consistent height */
+  }
+
+  .corps-card img {
+    width: 130px; /* Scaled down */
+    height: 130px;
+    flex-shrink: 0; /* Prevents squishing */
+  }
+
+  .corps-card-content {
+    flex: 1;
+    padding-left: 0.5rem; /* Small gap */
+  }
+
+  .corps-card h3 {
+    font-size: 1.25rem;
+    padding-bottom: 0.25rem;
+  }
+
+  .corps-card p {
+    font-size: 0.98rem;
+    line-height: 1.45;
+  }
+
+  .corps-card::before {
+    font-size: 1.3rem;
+    top: 8px;
+    right: 8px;
+  }
+
+  .regiments-section {
+    margin-top: 0.8rem;
+    padding: 0.8rem;
+    border-radius: 6px;
+  }
+
+  .regiments-section h4 {
+    font-size: 1.15rem;
+  }
+
+  .regiments-section li {
+    padding: 0.25rem 0;
+    padding-left: 0.9rem;
+    font-size: 0.95rem;
+  }
+
+  .regiments-section li:before {
+    font-size: 0.85rem;
+  }
+
+  /* Join Form: Scaled fields, keep centering and gold focus */
+  .join-section {
+    max-width: 450px; /* Slightly wider */
+    margin: 2.5rem auto;
+    padding: 1.8rem;
+  }
+
+  .join-section h1 {
+    font-size: 2rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .join-section p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+
+  #joinForm {
+    gap: 0.7rem;
+  }
+
+  .form-field {
+    gap: 0.35rem;
+    max-width: 100%;
+  }
+
+  #joinForm .form-field label {
+    font-size: 1.15rem;
+  }
+
+  #joinForm .form-field input {
+    padding: 1rem;
+    font-size: 1.05rem;
+    border-radius: 5px;
+  }
+
+  #joinForm button {
+    padding: 1rem 1.8rem;
+    font-size: 1.05rem;
+    margin-top: 0.7rem;
+    border-radius: 5px;
+    width: auto; /* Keep button-like, but full if needed */
+    min-width: 200px; /* Touch-friendly */
+  }
+
+  /* Generic form: Matches join */
+  form {
+    max-width: 450px;
+    padding: 1.8rem;
+    margin: 2rem auto;
+  }
+
+  form input {
+    padding: 1rem;
+    font-size: 1.05rem;
+  }
+
+  form label {
+    font-size: 1.15rem;
+    margin-bottom: 0.25rem;
+  }
+
+  form button {
+    padding: 1rem;
+    font-size: 1.05rem;
+    margin-top: 1.2rem;
+  }
+
+  /* Eagle Header: Scaled, centered like desktop */
+  .eagle-header {
+    max-width: 280px;
+    margin: 1.2rem auto 1.8rem;
+    padding: 0.4rem;
+    border-radius: 6px;
+  }
+
+  .eagle-header img {
+    max-height: 100px;
+  }
+
+  .eagle-header::after {
+    width: 50px;
+    height: 1.5px;
+  }
+
+  /* Footer: Scaled but full */
+  .footer {
+    padding: 1.8rem;
+  }
+
+  .footer::after {
+    width: 50px;
+    height: 3px;
+  }
+
+  .footer a {
+    font-size: 0.95rem;
+  }
+}
+
+/* ========================================
+   SMALL PHONES (≤480px): Minimal Stacking for Portrait
+   ======================================== */
+@media (max-width: 480px) {
+  /* Nav: Wrap more aggressively, but keep horizontal intent */
+  .nav-link {
+    margin: 0 0.6rem;
+    font-size: 0.9rem;
+    padding: 0.3rem 0.5rem;
+  }
+
+  /* Main: Tighter but structured */
+  #mainContent {
+    padding: 1.5rem;
+    margin: 1rem auto;
+  }
+
+  #mainContent h1 {
+    font-size: 2rem;
+  }
+
+  #mainContent p {
+    margin-bottom: 1.3rem;
+    text-align: left; /* Slight left-align for narrow readability, but center key paras if needed */
+  }
+
+  /* Grids: Force single column for space */
+  .videos-grid,
+  .quotes-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .video-card iframe,
+  .history-video-card iframe {
+    height: 160px;
+  }
+
+  /* Corps: Stack to column only here; center everything */
+  .corps-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+    gap: 0.8rem;
+  }
+
+  .corps-card img {
+    width: 110px;
+    height: 110px;
+    align-self: center;
+  }
+
+  .corps-card-content {
+    padding-left: 0;
+  }
+
+  .corps-card h3 {
+    font-size: 1.15rem;
+  }
+
+  /* Form: Full-width for ease */
+  .join-section {
+    max-width: 100%;
+    padding: 1.5rem;
+    margin: 2rem 0.5rem;
+  }
+
+  #joinForm button {
+    width: 100%; /* Full tap area */
+  }
+
+  form button {
+    width: 100%;
+  }
+
+  /* Eagle: Compact */
+  .eagle-header {
+    max-width: 240px;
+    margin: 0.8rem auto 1.2rem;
+  }
+
+  .eagle-header img {
+    max-height: 80px;
+  }
+
+  /* Decoratives: Simplify on tiny screens */
+  .corps-card::before,
+  .quote-card::after {
+    font-size: 2rem; /* Smaller but visible */
+  }
+
+  /* Background: Scroll for perf */
+  body {
+    background-attachment: scroll;
+  }
+}
+
+/* ========================================
+   LANDSCAPE MOBILE FIX: Preserve Desktop-Like Width
+   ======================================== */
+@media (max-height: 500px) and (orientation: landscape) and (min-width: 481px) {
+  /* Allow more desktop-like layout in landscape */
+  .videos-grid,
+  .quotes-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* 2 cols possible */
+  }
+
+  .corps-card {
+    flex-direction: row; /* Keep horizontal */
+  }
+
+  #mainContent {
+    padding: 1.8rem;
+  }
+
+  .video-card iframe {
+    height: 160px;
+  }
+}
+
+
+
