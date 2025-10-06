@@ -32,7 +32,7 @@ const quotes = [
 // Corps Data
 const corpsList = [{
         name: "Garde Imperiale/Imperial Guard (AS/EU/NA)",
-        img: "images/Garde.png",
+        img: "Garde.png",
         desc: "Founded in March 2020, the Garde Imperiale has stood as the Emperor's elite vangaurd and one of the most skilled, enduring forces in its field. But beyond being just a Roblox military group, the Guard takes pride in the strong sense of community it has built, uniting people from all backgrounds, promoting camaraderie, and ensuring everyone enjoys their time while striving for excellence in everything we do.",
         regiments: [
             "Regt. des Grenadiers-a-Pied/Regiment of Foot Grenadiers",
@@ -47,7 +47,7 @@ const corpsList = [{
     },
     {
         name: "Premier Corps/First Corps (EU/NA)",
-        img: "images/Premier.png",
+        img: "Premier.png",
         desc: "The First Corps of the Grandee Armee is the renowned for its bold and relentless advance on the battlefield. Throughout its history, it has earned numerous victories, proudly carrying its banners in triumph.",
         regiments: [
             "84e Régiment d'Infanterie de Ligne/84th Line Infantry Regiment",
@@ -57,7 +57,7 @@ const corpsList = [{
     },
     {
         name: "Deuxieme Corps/Second Corps (AS)",
-        img: "images/Deuxieme.png",
+        img: "Deuxieme.png",
         desc: "Forged in fire and strengthened by countless victories, the Deuxieme Corps stands as the largest and most formidable force within French Asia. Renowed for its strict discipline, exceptional skill in battle, and steadfast unity, the corps upholds and embodies the highest standards of excellence.",
         regiments: [
             "18e Régiment d'Infanterie de Ligne/18th Line Infantry Regiment",
@@ -68,7 +68,7 @@ const corpsList = [{
     },
     {
         name: "Troisieme Corps/Third Corps (EU/NA)",
-        img: "images/Trosieme.png",
+        img: "Trosieme.png",
         desc: "Community lies at the very core of the Troisieme. It is home to some of France's longest-serving veterans alongside a growing generation of new soldiers. The corps operates across all major time zones, hosting events for members in Europe, North and South America, and the Middle East. In the Troisieme, there's a place for everyone.",
         regiments: [
             "45e Régiment d'Infanterie de Ligne/45th Line Regiment",
@@ -78,7 +78,7 @@ const corpsList = [{
     },
     {
         name: "Quatrieme Corps/Fourth Corps (EU/NA)",
-        img: "images/Quatrieme.png",
+        img: "Quatrieme.png",
         desc: "The Quatrieme Corps takes great pride in the skill, discipline, and professionalism of its soldiers, making them a formidable presence in every engagement. Known for their decisive flanks, powerful chargesm and precivse coordinated volleys, the corps consistently demonstrates tactical excellence on the battlefield. Above all, the Quatrieme values camaraderie and enjoyment, with its four regiments led by dedicated staff who work to foster a strong, welcoming community for all members.",
         regiments: [
             "112e Régiment d'Infanterie de Ligne/112th Line Infatry Regiment",
@@ -89,7 +89,7 @@ const corpsList = [{
     },
     {
         name: "Cinquieme Corps/Fifth Corps (EU/NA)",
-        img: "images/Cinquieme.png",
+        img: "Cinquieme.png",
         desc: "The Fifth Corps of Napoleon's Grande Armee was among the most important corps formations during the Napoleonic Wars. Formed as part of Napoleon's military reorganization after proclaiming himself Emperor in 1804, it embodied his vision of creating self-sufficient corps capable of independent action. Each corps combined infantry, cavalry, and artillery units, enabling them to move swiftly and operate with remarkable efficiency on the battlefield.",
         regiments: [
             "21e Régiment d'Infanterie de Ligne/21st Regiment",
@@ -100,7 +100,7 @@ const corpsList = [{
     },
     {
         name: "Neuvieme Corps/Ninth Corps (AS)",
-        img: "images/Neuvieme.png",
+        img: "Neuvieme.png",
         desc: "The Neuvieme Corps was born from the Emperor's call to raise new banners for France's expansion into Asia. Backed by the oldest French Asian unit, it carries a proud legacy of enduring hardships and celebrating triumphs. The corps welcomes the bold and the determined to take up the mantle and leave their mark in history, all while fostering deep bonds of brotherhood in times of challenges. United in purpose, they march forward with unwavering resolve toward one shared goal: victory.",
         regiments: [
             "30e Régiment d'Infanterie de Ligne/30th Line Infantry Regiment",
@@ -298,3 +298,4 @@ links.forEach(link => {
 
 // Default Load
 renderPage("home");
+
