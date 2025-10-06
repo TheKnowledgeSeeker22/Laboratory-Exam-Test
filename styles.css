@@ -7,7 +7,7 @@
 body {
   font-family: 'Georgia', serif;
   background-color: #f2efe9; 
-  background-image: url('images/Garde-Bg.png'); 
+  background-image: url('Garde-Bg.png'); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1273,3 +1273,4 @@ form button {
     height: 140px; /* Shorter in landscape */
   }
 }
+
