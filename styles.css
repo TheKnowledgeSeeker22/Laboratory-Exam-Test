@@ -7,7 +7,7 @@
 body {
   font-family: 'Georgia', serif;
   background-color: #f2efe9; 
-  background-image: url('Garde-Bg.png'); 
+  background-image: url('images/Garde-Bg.png'); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -898,7 +898,7 @@ body::before {
 }
 
 /* ============================================================================================================
-    GENERIC FORM STYLES (FALLBACK/OVERRIDE
+    GENERIC FORM STYLES (FALLBACK/OVERRIDE)
    ============================================================================================================
   */
 
@@ -946,83 +946,82 @@ form button {
 }
 
 /* ========================================
-   MOBILE RESPONSIVENESS: TABLETS AND LARGER MOBILES (≤768px)
+   MOBILE RESPONSIVENESS & APPEARANCE: TABLETS AND LARGER MOBILES
    ======================================== */
 /* General mobile adjustments: Reduce fonts, padding, and max-widths for better fit */
 @media (max-width: 768px) {
-  /* Body and container: Tighter overall spacing */
   body {
-    font-size: 0.95rem; /* Slightly smaller base font */
+    font-size: 0.95rem; 
   }
 
   .container {
-    padding: 0 0.75rem; /* Less side padding */
-    max-width: 95%; /* Near-full width */
+    padding: 0 0.75rem; 
+    max-width: 95%; 
   }
 
   /* Header: Compact nav with stacked layout if needed */
   .site-header {
-    padding: 0.75rem 0; /* Reduced vertical padding */
+    padding: 0.75rem 0; 
   }
 
   .header-inner {
-    flex-direction: column; /* Stack logo and nav vertically on very small screens */
+    flex-direction: column; 
     gap: 0.5rem;
-    align-items: stretch; /* Full width for nav */
+    align-items: stretch; 
   }
 
   #logo.logo {
-    font-size: 1.1rem; /* Smaller logo */
-    justify-content: center; /* Center logo when stacked */
+    font-size: 1.1rem; 
+    justify-content: center; 
   }
 
   .logo i {
-    font-size: 1.3rem; /* Smaller icon */
+    font-size: 1.3rem; 
   }
 
   .nav-menu {
-    justify-content: center; /* Center nav links */
-    flex-wrap: wrap; /* Allow wrapping if too many links */
+    justify-content: center; 
+    flex-wrap: wrap; 
   }
 
   .nav-link {
-    margin: 0 1rem; /* Reduced horizontal spacing */
-    font-size: 0.95rem; /* Smaller text */
+    margin: 0 1rem; 
+    font-size: 0.95rem; 
   }
 
-  /* Main content: Less padding, smaller shadows for speed */
+  /* Main content */
   #mainContent {
     margin: 1rem auto;
-    padding: 1.5rem; /* Halved padding */
-    border-radius: 10px; /* Slightly smaller radius */
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(212, 175, 55, 0.05); /* Lighter shadow */
+    padding: 1.5rem; 
+    border-radius: 10px; 
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(212, 175, 55, 0.05); 
   }
 
   #mainContent h1 {
-    font-size: 2.2rem; /* Smaller main titles */
+    font-size: 2.2rem; 
     margin-bottom: 1rem;
-    letter-spacing: 1px; /* Reduced spacing */
+    letter-spacing: 1px; 
   }
 
   #mainContent h2 {
-    font-size: 1.6rem; /* Smaller section titles */
+    font-size: 1.6rem; 
   }
 
   #mainContent p {
-    font-size: 1rem; /* Ensure readable body text */
+    font-size: 1rem; 
     line-height: 1.6;
     margin-bottom: 1.5rem;
   }
 
   #mainContent ul li {
-    padding-left: 1.2rem; /* Less indent for bullets */
+    padding-left: 1.2rem; 
     font-size: 0.95rem;
   }
 
-  /* Videos/History: Single-column grid, shorter iframes */
+  /* Videos/History: */
   .videos-section,
   .history-video-section {
-    padding: 1.5rem; /* Reduced padding */
+    padding: 1.5rem; 
     margin-top: 2rem;
   }
 
@@ -1032,7 +1031,7 @@ form button {
   }
 
   .videos-grid {
-    grid-template-columns: 1fr; /* Single column */
+    grid-template-columns: 1fr; 
     gap: 1.5rem;
   }
 
@@ -1043,7 +1042,7 @@ form button {
 
   .video-card iframe,
   .history-video-card iframe {
-    height: 180px; /* Shorter videos on mobile */
+    height: 180px; 
   }
 
   .video-card h3,
@@ -1051,9 +1050,9 @@ form button {
     font-size: 1rem;
   }
 
-  /* Quotes: Single-column grid */
+  /* Quotes */
   .quotes-grid {
-    grid-template-columns: 1fr; /* Stack quotes vertically */
+    grid-template-columns: 1fr; 
     gap: 1.5rem;
     margin-top: 1.5rem;
   }
@@ -1063,7 +1062,7 @@ form button {
   }
 
   .quote-card::after {
-    font-size: 2.5rem; /* Smaller quote mark */
+    font-size: 2.5rem; 
     left: 15px;
   }
 
@@ -1071,21 +1070,21 @@ form button {
     font-size: 1rem;
   }
 
-  /* Corps: Stack image above text, full-width cards */
+  
   .corps-grid {
     gap: 2rem;
   }
 
   .corps-card {
-    flex-direction: column; /* Stack vertically */
-    text-align: center; /* Center content */
+    flex-direction: column; 
+    text-align: center; 
     padding: 1.2rem;
   }
 
   .corps-card img {
-    width: 140px; /* Smaller image */
+    width: 140px; 
     height: 140px;
-    margin: 0 auto; /* Center image */
+    margin: 0 auto; 
   }
 
   .corps-card h3 {
@@ -1110,11 +1109,11 @@ form button {
     padding-left: 0.8rem;
   }
 
-  /* Join Form: Compact, touch-friendly fields */
+  /* Join Form Mobile */
   .join-section {
     margin: 2rem auto;
     padding: 1.2rem;
-    max-width: 90%; /* Near-full width */
+    max-width: 90%; 
   }
 
   .join-section h1 {
@@ -1122,30 +1121,30 @@ form button {
   }
 
   #joinForm {
-    gap: 0.5rem; /* Tighter gaps */
+    gap: 0.5rem; 
   }
 
   .form-field {
-    max-width: 100%; /* Full width on mobile */
+    max-width: 100%; 
     gap: 0.3rem;
   }
 
   #joinForm .form-field label {
-    font-size: 1.1rem; /* Slightly smaller labels */
+    font-size: 1.1rem; 
   }
 
   #joinForm .form-field input {
-    padding: 1rem; /* Maintain touch size (≥44px height) */
+    padding: 1rem; 
     font-size: 1rem;
   }
 
   #joinForm button {
     padding: 0.9rem 1.5rem;
     font-size: 1rem;
-    width: 100%; /* Full-width for easy tap */
+    width: 100%; 
   }
 
-  /* Generic form fallback: Matches join styles */
+  /* Generic Form Fallback Mobile */
   form {
     padding: 1.5rem;
     margin: 1.5rem auto;
@@ -1165,7 +1164,7 @@ form button {
     font-size: 1rem;
   }
 
-  /* Eagle Header: Already adjusted, but ensure centering */
+ /* Eagle Mobile Centering (already added but just incase) */
   .eagle-header {
     max-width: 250px;
     margin: 0.5rem auto 1.5rem;
@@ -1175,7 +1174,7 @@ form button {
     max-height: 80px;
   }
 
-  /* Footer: Reduced padding */
+  /* Footer Mobile */
   .footer {
     padding: 1.5rem;
   }
@@ -1186,17 +1185,15 @@ form button {
 }
 
 /* ========================================
-   EXTRA SMALL MOBILES (PHONES ≤480px): Ultra-compact
+   EXTRA SMALL MOBILES (PHONES)
    ======================================== */
-/* For very small screens: Further reductions for portrait mode */
+
 @media (max-width: 480px) {
-  /* Header: Even tighter */
   .nav-link {
-    margin: 0 0.75rem; /* Minimal spacing */
+    margin: 0 0.75rem; 
     font-size: 0.9rem;
   }
 
-  /* Main: Minimal padding */
   #mainContent {
     padding: 1rem;
     margin: 0.5rem auto;
@@ -1208,22 +1205,21 @@ form button {
 
   #mainContent p {
     margin-bottom: 1.2rem;
-    text-align: left; /* Left-align for easier reading on narrow screens */
+    text-align: left; 
   }
 
-  /* Videos: Even shorter */
+  /* Videos: Now shorter for mobile */
   .video-card iframe,
   .history-video-card iframe {
     height: 150px;
   }
 
-  /* Corps: Smaller image */
+  /* Corps Image, small in mobile */
   .corps-card img {
     width: 120px;
     height: 120px;
   }
 
-  /* Form: Full-width everything */
   .join-section {
     padding: 1rem;
     margin: 1rem auto;
@@ -1233,7 +1229,6 @@ form button {
     width: 100%;
   }
 
-  /* Eagle: Minimal size */
   .eagle-header {
     max-width: 200px;
   }
@@ -1242,22 +1237,23 @@ form button {
     max-height: 60px;
   }
 
-  /* Hide decorative elements if too cramped */
+
   .corps-card::before,
   .quote-card::after {
-    display: none; /* Remove emoji/quote mark on tiny screens */
+    display: none; 
   }
 
-  /* Background: Ensure it scales well */
+  
   body {
-    background-attachment: scroll; /* Scroll background on very small devices to save performance */
+    background-attachment: scroll; 
   }
 }
 
 /* ========================================
-   LANDSCAPE ORIENTATION FIX (e.g., Wide Mobile)
+   LANDSCAPE ORIENTATION FIX (Wide Mobile)
    ======================================== */
-/* For mobile in landscape: Prevent overflow */
+
+/* For mobile in landscape */
 @media (max-height: 500px) and (orientation: landscape) {
   #mainContent {
     padding: 1rem;
@@ -1275,42 +1271,41 @@ form button {
 }
 
 /* ========================================
-   BASE RESPONSIVE SCALING (Applies Globally for Fluidity)
+   BASE RESPONSIVE SCALING (Applies Globally)
    ======================================== */
-/* Use rem units for better scaling; root font adjusts slightly on mobile */
+
 :root {
-  font-size: 16px; /* Desktop base */
+  font-size: 16px; 
 }
 
 @media (max-width: 768px) {
   :root {
-    font-size: 15px; /* Slight reduction for mobile base */
+    font-size: 15px; 
   }
 }
 
 @media (max-width: 480px) {
   :root {
-    font-size: 14px; /* Minimum for readability */
+    font-size: 14px; 
   }
 }
 
 /* ========================================
-   TABLETS AND MOBILES (≤768px): Scale Down, Preserve Structure
+   TABLETS AND MOBILES
    ======================================== */
 @media (max-width: 768px) {
-  /* Container: Near-full width with minimal padding */
   .container {
     max-width: 95%;
     padding: 0 0.8rem;
   }
 
-  /* Header/Nav: Horizontal with wrap; smaller but multi-link visible */
+  
   .site-header {
     padding: 0.8rem 0;
   }
 
   .header-inner {
-    gap: 0.5rem; /* Small space if wrapping */
+    gap: 0.5rem; 
   }
 
   #logo.logo {
@@ -1324,31 +1319,31 @@ form button {
   }
 
   .nav-menu {
-    flex-wrap: wrap; /* Wraps links if screen too narrow, keeps horizontal */
+    flex-wrap: wrap; 
     justify-content: center;
-    gap: 0.5rem; /* Space between wrapped lines */
+    gap: 0.5rem; 
   }
 
   .nav-menu li {
-    flex: 1 1 auto; /* Allows shrinking */
+    flex: 1 1 auto; 
   }
 
   .nav-link {
-    margin: 0 0.8rem; /* Tighter spacing */
+    margin: 0 0.8rem; 
     font-size: 0.95rem;
-    padding: 0.2rem 0.4rem; /* Touch-friendly padding */
-    min-width: 4rem; /* Prevents squishing */
+    padding: 0.2rem 0.4rem; 
+    min-width: 4rem; 
   }
 
   .nav-link::after {
-    bottom: -3px; /* Adjust for smaller text */
+    bottom: -3px; 
     height: 1.5px;
   }
 
-  /* Main Content: Reduced padding, lighter shadows; keeps card feel */
+  /* Main content: Reduced some weights and heights for mobile */
   #mainContent {
     margin: 1.5rem auto;
-    padding: 2rem; /* Still generous but scaled */
+    padding: 2rem; 
     max-width: 95%;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(212, 175, 55, 0.08);
@@ -1356,11 +1351,11 @@ form button {
 
   #mainContent::before {
     width: 30px;
-    height: 15px; /* Smaller "seal" */
+    height: 15px; 
   }
 
   #mainContent h1 {
-    font-size: 2.4rem; /* Scaled but prominent */
+    font-size: 2.4rem; 
     margin-bottom: 1.2rem;
     letter-spacing: 1.5px;
     padding-bottom: 0.4rem;
@@ -1372,10 +1367,10 @@ form button {
   }
 
   #mainContent p {
-    font-size: 1.05rem; /* Readable, centered */
+    font-size: 1.05rem; 
     line-height: 1.65;
     margin-bottom: 1.5rem;
-    text-align: center; /* Keep desktop centering */
+    text-align: center; 
   }
 
   #mainContent ul li {
@@ -1388,7 +1383,7 @@ form button {
     font-size: 1rem;
   }
 
-  /* Videos/History: Auto-fit grid (1-2 cols), shorter but bordered like desktop */
+  /* Videos/History: shorter but ordered like in desktop */
   .videos-section,
   .history-video-section {
     margin-top: 2.5rem;
@@ -1401,7 +1396,7 @@ form button {
   .videos-section h2,
   .history-video-section h2 {
     font-size: 1.7rem;
-    text-align: center; /* Keep centered */
+    text-align: center; 
   }
 
   .videos-section p,
@@ -1411,7 +1406,7 @@ form button {
   }
 
   .videos-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Allows 2 cols on wider mobiles/tablets */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
     gap: 1.5rem;
     max-width: 100%;
   }
@@ -1420,12 +1415,12 @@ form button {
   .history-video-card {
     padding: 1rem;
     border-radius: 8px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08); /* Lighter but present */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08); 
   }
 
   .video-card iframe,
   .history-video-card iframe {
-    height: 180px; /* Scaled height */
+    height: 180px; 
     border-radius: 6px;
   }
 
@@ -1435,7 +1430,6 @@ form button {
     margin-top: 0.8rem;
   }
 
-  /* Quotes: Auto-fit (1-2 cols), keep desktop card style */
   .quotes-grid {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Flexible columns */
     gap: 1.5rem;
@@ -1464,29 +1458,28 @@ form button {
     margin-top: 0.8rem;
   }
 
-  /* Corps: Keep row on tablets; smaller images, centered content */
   .corps-grid {
     gap: 2rem;
     margin-top: 1.8rem;
   }
 
   .corps-card {
-    flex-direction: row; /* Preserve horizontal like desktop */
-    align-items: flex-start; /* Top-align if heights vary */
+    flex-direction: row; 
+    align-items: flex-start; 
     padding: 1.3rem;
     gap: 1rem;
-    min-height: 160px; /* Consistent height */
+    min-height: 160px; 
   }
 
   .corps-card img {
-    width: 130px; /* Scaled down */
+    width: 130px; 
     height: 130px;
-    flex-shrink: 0; /* Prevents squishing */
+    flex-shrink: 0; 
   }
 
   .corps-card-content {
     flex: 1;
-    padding-left: 0.5rem; /* Small gap */
+    padding-left: 0.5rem; 
   }
 
   .corps-card h3 {
@@ -1525,9 +1518,9 @@ form button {
     font-size: 0.85rem;
   }
 
-  /* Join Form: Scaled fields, keep centering and gold focus */
+  
   .join-section {
-    max-width: 450px; /* Slightly wider */
+    max-width: 450px; 
     margin: 2.5rem auto;
     padding: 1.8rem;
   }
@@ -1566,11 +1559,11 @@ form button {
     font-size: 1.05rem;
     margin-top: 0.7rem;
     border-radius: 5px;
-    width: auto; /* Keep button-like, but full if needed */
-    min-width: 200px; /* Touch-friendly */
+    width: auto; 
+    min-width: 200px; 
   }
 
-  /* Generic form: Matches join */
+  /* Matches join for Generic Form */
   form {
     max-width: 450px;
     padding: 1.8rem;
@@ -1593,7 +1586,7 @@ form button {
     margin-top: 1.2rem;
   }
 
-  /* Eagle Header: Scaled, centered like desktop */
+  /* Eagle Header fix */
   .eagle-header {
     max-width: 280px;
     margin: 1.2rem auto 1.8rem;
@@ -1610,7 +1603,7 @@ form button {
     height: 1.5px;
   }
 
-  /* Footer: Scaled but full */
+ 
   .footer {
     padding: 1.8rem;
   }
@@ -1626,17 +1619,17 @@ form button {
 }
 
 /* ========================================
-   SMALL PHONES (≤480px): Minimal Stacking for Portrait
+   SMALL PHONES
    ======================================== */
 @media (max-width: 480px) {
-  /* Nav: Wrap more aggressively, but keep horizontal intent */
+
   .nav-link {
     margin: 0 0.6rem;
     font-size: 0.9rem;
     padding: 0.3rem 0.5rem;
   }
 
-  /* Main: Tighter but structured */
+  /* Main tighter but better */
   #mainContent {
     padding: 1.5rem;
     margin: 1rem auto;
@@ -1648,10 +1641,9 @@ form button {
 
   #mainContent p {
     margin-bottom: 1.3rem;
-    text-align: left; /* Slight left-align for narrow readability, but center key paras if needed */
+    text-align: left; 
   }
 
-  /* Grids: Force single column for space */
   .videos-grid,
   .quotes-grid {
     grid-template-columns: 1fr;
@@ -1663,7 +1655,7 @@ form button {
     height: 160px;
   }
 
-  /* Corps: Stack to column only here; center everything */
+
   .corps-card {
     flex-direction: column;
     text-align: center;
@@ -1685,7 +1677,6 @@ form button {
     font-size: 1.15rem;
   }
 
-  /* Form: Full-width for ease */
   .join-section {
     max-width: 100%;
     padding: 1.5rem;
@@ -1693,14 +1684,13 @@ form button {
   }
 
   #joinForm button {
-    width: 100%; /* Full tap area */
+    width: 100%; 
   }
 
   form button {
     width: 100%;
   }
 
-  /* Eagle: Compact */
   .eagle-header {
     max-width: 240px;
     margin: 0.8rem auto 1.2rem;
@@ -1710,30 +1700,28 @@ form button {
     max-height: 80px;
   }
 
-  /* Decoratives: Simplify on tiny screens */
   .corps-card::before,
   .quote-card::after {
-    font-size: 2rem; /* Smaller but visible */
+    font-size: 2rem; 
   }
 
-  /* Background: Scroll for perf */
   body {
     background-attachment: scroll;
   }
 }
 
 /* ========================================
-   LANDSCAPE MOBILE FIX: Preserve Desktop-Like Width
+   LANDSCAPE MOBILE FIX
    ======================================== */
 @media (max-height: 500px) and (orientation: landscape) and (min-width: 481px) {
-  /* Allow more desktop-like layout in landscape */
+  
   .videos-grid,
   .quotes-grid {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* 2 cols possible */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
   }
 
   .corps-card {
-    flex-direction: row; /* Keep horizontal */
+    flex-direction: row; 
   }
 
   #mainContent {
@@ -1744,6 +1732,3 @@ form button {
     height: 160px;
   }
 }
-
-
-
